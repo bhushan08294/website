@@ -31,7 +31,7 @@
 /* Style the active/current link*/
 .header a.active {
   background-color: dodgerblue;
-  color: white;
+  color: red;
 }
 
 /* Float the link section to the right */

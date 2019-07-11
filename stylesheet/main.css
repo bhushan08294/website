@@ -27,6 +27,10 @@
   background-color: #ddd;
   color: black;
 }
+body {
+ background-image: url("Notes.jpg");
+ background-color: #cccccc;
+}
 
 /* Style the active/current link*/
 .header a.active {

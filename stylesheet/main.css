@@ -26,7 +26,7 @@ body {
  background-color: #cccccc;
 }
 img {
-  opacity: 0.5;
+  opacity: 0.2;
   filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 /* Style the active/current link*/

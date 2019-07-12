@@ -4,7 +4,9 @@
 }
 
 /* Style the header links */
-.header a {
+.header 
+a {
+  font-family:"Segoe UI",courier
   float: left;
   color: white;
   text-align: center;

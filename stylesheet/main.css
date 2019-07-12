@@ -25,7 +25,10 @@ body {
  background-image: url("computer.jpg");
  background-color: #cccccc;
 }
-
+img {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
 /* Style the active/current link*/
 .header a.active {
   color: white;

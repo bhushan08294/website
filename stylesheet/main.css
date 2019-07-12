@@ -22,11 +22,14 @@
 }
 
 body {
- background-image: url("Wall.jpg");
+ background-image: url("computer.jpg");
  background-color: #cccccc;
- background-position: center
+   background-size: cover;
 }
-
+img {
+  opacity: 0.2;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
 /* Style the active/current link*/
 .header a.active {
   color: white;

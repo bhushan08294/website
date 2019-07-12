@@ -22,7 +22,7 @@
 }
 
 body {
- background-image: url("computer.jpg");
+ background-image: url("computer.jpg") no-repeat center fixed;
  background-color: #cccccc;
    background-size: cover;
 }

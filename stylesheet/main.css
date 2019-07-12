@@ -28,7 +28,7 @@ body {
 
 /* Style the active/current link*/
 .header a.active {
-  color: black;
+  color: white;
 }
 
 /* Float the link section to the right */

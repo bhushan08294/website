@@ -24,6 +24,7 @@
 body {
  background-image: url("Wall.jpg");
  background-color: #cccccc;
+ background-position: center
 }
 
 /* Style the active/current link*/

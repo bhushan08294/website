@@ -67,9 +67,9 @@ h3 {
 }
 
 .input {
-  padding: 15px 32px;
-  margin: 4px 2px;
-  cursor: pointer;
+  position: absolute;
+  left: 500px;
+  top: 500px;
 }
 
 body {

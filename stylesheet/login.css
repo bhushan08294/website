@@ -1,11 +1,46 @@
-.body {
-	font: courier
+a {
+  font: courier
   float: left;
   color: white;
   text-align: center;
   padding: 12px;
   text-decoration: none;
-  font-size: 18px; 
+  font-size: 32px; 
   line-height: 25px;
   border-radius: 4px;
 }
+
+div {
+  font: courier
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 32px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+button {
+	outline: none !important;
+	border: none;
+	background: transparent;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+iframe {
+	border: none !important;
+}
+
+body {
+ background-image: url("computer.jpg");
+ background-color: #cccccc;
+   background-size: cover;
+}
+img {
+  opacity: 0.2;
+  filter: alpha(opacity=50); /* For IE8 and earlier */

@@ -9,13 +9,13 @@
   <script src='javascripts/main.js'></script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
 	<meta name="google-signin-client_id" content="724129437504-rknf43oc3t4k3cs505dhv9snbe4vjjv0.apps.googleusercontent.com">
-	<div class="g-signin2" data-onsuccess="onSignIn"></div>
+	<div id="b" class="g-signin2" data-onsuccess="onSignIn"></div>
 	<a href="#" onclick="signOut();">Sign out</a>
 <script>
   function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
-      console.log('User signed out.');
+      alert('User signed out.');
     });
   }
 </script>

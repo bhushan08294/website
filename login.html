@@ -10,10 +10,10 @@
   <script src="https://apis.google.com/js/platform.js" async defer></script>
 <script>
   function signOut() {
-      alert('User signed out.');
+      alert('User signing out.');
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
-      alert('User signed out.');
+      alert('User signed out.');//check this succeeded
     });
   }
 </script>

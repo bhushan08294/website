@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html>
+<head>
 <title>
 </title>
 <link rel="stylesheet" type="text/css" href="stylesheet/main.css">
 <link rel="stylesheet" type="text/css" href="stylesheet/w3.css">
+<meta name="google-signin-client_id" content="724129437504-rknf43oc3t4k3cs505dhv9snbe4vjjv0.apps.googleusercontent.com">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src='javascripts/main.js'></script>
+</head>
+
+
 <body>
 	<div class="header">&nbsp;</div>
-  <script src='javascripts/main.js'></script>
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
-<script>
-  function signOut() {
-      alert('User signing out.');
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      alert('User signed out.');//check this succeeded
-    });
-  }
-</script>
-	<meta name="google-signin-client_id" content="724129437504-rknf43oc3t4k3cs505dhv9snbe4vjjv0.apps.googleusercontent.com">
+	
 	<div id="b" class="g-signin2" data-onsuccess="onSignIn"></div>
 	<button onClick="signOut();">Sign out</button>
+	<button></button>
   </body>
 </html>

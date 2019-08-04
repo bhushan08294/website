@@ -15,7 +15,7 @@
   function onSignIn(googleUser)
   {
     let profile = googleUser.getBasicProfile();
-    alert('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    alert('ID: ' + profile.getId());
     alert('Name: ' + profile.getName());
     alert('Image URL: ' + profile.getImageUrl());
     alert('Email: ' + profile.getEmail());
@@ -32,7 +32,7 @@
   <script src='javascripts/main.js'></script>
 <body>
   <div class="g-signin2" data-onsuccess="onSignIn"></div>
-<a href="#" onclick="signOut();">Sign out</a>
+<a href="index.html" onclick="signOut();">Sign out</a>
 <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>

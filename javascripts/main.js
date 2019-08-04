@@ -1,6 +1,5 @@
 let header=()=>{
 
-
   let txt="<a href=\"index.html\" class=\"w3-bar-item w3-button w3-wide class=\"WHITEBOARD\">WHITEBOARD</a>\
   <div class=\"header-right\">\
     <a href=\"login.html\" class=\"w3-bar-item w3-button\"> Login</a>\

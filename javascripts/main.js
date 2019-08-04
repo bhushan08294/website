@@ -11,5 +11,7 @@ let header=()=>{
   </div>"
   let h=document.getElementsByClassName("header")[0];
   h.innerHTML=txt;
-  
+
+}
+
 header();

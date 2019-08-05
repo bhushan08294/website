@@ -14,20 +14,3 @@ let header=()=>{
 }
 
 header();
-let footer=()=>{
-
-  let txt="<a href=\"index.html\"</a>\
-   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:0px 48px">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-</div>
-  let h=document.getElementsByClassName("footer")[0];
-  h.innerHTML=txt;
-
-}
-
-footer();

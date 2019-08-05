@@ -16,17 +16,6 @@ a {
   line-height: 25px;
   border-radius: 4px;
 }
-function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-}
-
-function signOut() {
-  color: white;
-}
 p1 {
   font: courier
   float: left;
@@ -62,6 +51,16 @@ h3 {
   display: block;
   color: white;
   font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+h4 { 
+  display: block;
+  color: black;
+  font-size: 3em;
   margin-top: 0.67em;
   margin-bottom: 0.67em;
   margin-left: 0;

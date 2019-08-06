@@ -1,0 +1,156 @@
+-- MySQL dump 10.13  Distrib 5.7.27, for Linux (x86_64)
+--
+-- Host: localhost    Database: whiteboard
+-- ------------------------------------------------------
+-- Server version	5.7.27-0ubuntu0.16.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `current_students`
+--
+
+DROP TABLE IF EXISTS `current_students`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `current_students` (
+  `current_students_id` int(11) NOT NULL AUTO_INCREMENT,
+  `current_students_name` varchar(20) DEFAULT NULL,
+  `current_students_email` varchar(40) NOT NULL,
+  `subject` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`current_students_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1006 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `current_students`
+--
+
+LOCK TABLES `current_students` WRITE;
+/*!40000 ALTER TABLE `current_students` DISABLE KEYS */;
+INSERT INTO `current_students` VALUES (1001,'Bhushan Chaudhari','bhushan08294@gmail.com','Computer Science'),(1002,'Jitu','','Computer Science'),(1003,'Vishal','','Computer Science'),(1004,'Sidharth','','Computer Science'),(1005,'Subin','','Computer Science');
+/*!40000 ALTER TABLE `current_students` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ex_students`
+--
+
+DROP TABLE IF EXISTS `ex_students`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ex_students` (
+  `ex_students_id` int(11) NOT NULL AUTO_INCREMENT,
+  `ex_students_name` varchar(20) DEFAULT NULL,
+  `ex_students_email` varchar(40) NOT NULL,
+  `subject` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`ex_students_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1016 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ex_students`
+--
+
+LOCK TABLES `ex_students` WRITE;
+/*!40000 ALTER TABLE `ex_students` DISABLE KEYS */;
+INSERT INTO `ex_students` VALUES (1011,'Pavan Pardeshi','pavanpardeshi10@gmail.com','Cloud Computing'),(1012,'Paul','','Cloud Computing'),(1013,'Udaini','','Cloud Computing'),(1014,'Amrita','','Cloud Computing'),(1015,'Samiksha','','Cloud Computing');
+/*!40000 ALTER TABLE `ex_students` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `notes`
+--
+
+DROP TABLE IF EXISTS `notes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `notes` (
+  `notes_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `subject` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`notes_ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1276544 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `notes`
+--
+
+LOCK TABLES `notes` WRITE;
+/*!40000 ALTER TABLE `notes` DISABLE KEYS */;
+INSERT INTO `notes` VALUES (1276543,'234567890-098765432');
+/*!40000 ALTER TABLE `notes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `subjects`
+--
+
+DROP TABLE IF EXISTS `subjects`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `subjects` (
+  `subject_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `subject` varchar(20) DEFAULT NULL,
+  `teachers_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`subject_ID`),
+  KEY `teachers_id` (`teachers_id`),
+  CONSTRAINT `subjects_ibfk_1` FOREIGN KEY (`teachers_id`) REFERENCES `teachers` (`teachers_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `subjects`
+--
+
+LOCK TABLES `subjects` WRITE;
+/*!40000 ALTER TABLE `subjects` DISABLE KEYS */;
+INSERT INTO `subjects` VALUES (1,'Cloud Computing',1112),(2,'Computer science',1111);
+/*!40000 ALTER TABLE `subjects` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `teachers`
+--
+
+DROP TABLE IF EXISTS `teachers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `teachers` (
+  `teachers_id` int(11) NOT NULL AUTO_INCREMENT,
+  `teachers_name` varchar(20) DEFAULT NULL,
+  `teachers_email` varchar(40) NOT NULL,
+  `subject` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`teachers_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1116 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `teachers`
+--
+
+LOCK TABLES `teachers` WRITE;
+/*!40000 ALTER TABLE `teachers` DISABLE KEYS */;
+INSERT INTO `teachers` VALUES (1111,'Kaushal Shivhare','kaushal1294@gmail.com','Computer Science'),(1112,'Chetan Padme','chetan.padme93@gmail.com','Cloud Computing'),(1113,'John','','Cloud Computing'),(1114,'Paul Laird','','Cloud Computing'),(1115,'Aisling Duhy','','Cloud Computing');
+/*!40000 ALTER TABLE `teachers` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2019-08-06 11:36:39

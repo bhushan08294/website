@@ -12,6 +12,30 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <script>
+var baseURL = "http://whiteboard.dbsprojects.ie:8080/"
+
+function fetch(completeURL)
+{
+	return new Promise(function(resolve, reject) 
+	{
+		var xhr = new XMLHttpRequest();
+		xhr.open("GET", completeURL, true);
+  
+		xhr.onreadystatechange = function() 
+		{
+			if (xhr.readyState == XMLHttpRequest.DONE) 
+			{
+				resolve(JSON.parse(this.responseText));
+			}
+			if(xhr.status != 200)
+			{
+				reject("Error");
+			}
+		};
+				xhr.send();
+	})
+};
+
   function onSignIn(googleUser)
   {
     let profile = googleUser.getBasicProfile();
@@ -19,6 +43,7 @@
     alert('Name: ' + profile.getName());
     alert('Image URL: ' + profile.getImageUrl());
     alert('Email: ' + profile.getEmail());
+    //call verify
   }
   function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
@@ -26,12 +51,26 @@
       console.log('User signed out.');
     });
   }
+  function onRegister(googleUser)
+  {
+    let profile = googleUser.getBasicProfile();
+    alert('ID: ' + profile.getId());
+    let name= profile.getName();
+    alert('Image URL: ' + profile.getImageUrl());
+    let email= profile.getEmail();
+    let completeURL=baseURL+'addUser?name='+name+'&email='+email;
+    fetch(completeURL).then(function(provided){
+    	/check it's success, otherwise report error
+    })
+  }
 </script>
   </head>
   <div class="header">&nbsp;</div>
   <script src='javascripts/main.js'></script>
 <body>
  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+ Register:
+ <div class="g-signin2" data-onsuccess="onRegister"></div>
  <br>
 <a href="index.html" onclick="signOut();">Sign out</a>
 <br>

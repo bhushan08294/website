@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.config['MYSQL_USER'] = 'web'
 app.config['MYSQL_PASSWORD'] = 'webPass'
 app.config['MYSQL_DB'] = 'whiteboard'
-app.config['MYSQL_HOST'] = 'localhost' #for now
+app.config['MYSQL_HOST'] = 'whiteboard@localhost'
 mysql.init_app(app)
 
 @app.route("/addUser") #Add User
@@ -17,7 +17,7 @@ def add():
     email = request.args.get('email')
     cur = mysql.connection.cursor() #create a connection to the SQL instance
     #Compose an INSERT statement:
-    s='''INSERT INTO students(studentName, email) VALUES('{}','{}');'''.format(name,email)
+    s='''INSERT INTO current_students(current_students_name, current_students_email) VALUES('{}','{}');'''.format(name,email)
     cur.execute(s)
     mysql.connection.commit()
     return '{"Result":"success"}'
@@ -38,5 +38,5 @@ def hello(): # Name of the method
         ret=ret+'{"Name": "'+row[0]+'", "Email": "'+row[1]+'", "ID": '+str(row[2])+'}'
     ret=ret+']}'
     return ret      #Return the data in a string formatif __name__ == "__main__":
-        app.run(host='0.0.0.0', port='8080') #Run the flask app at port 8080
+        app.run(host='40.115.8.201', port='8080') #Run the flask app at port 8080
 

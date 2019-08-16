@@ -79,6 +79,16 @@ h4 {
   margin-right: 0;
   font-weight: bold;
 }
+h5 { 
+  display: block;
+  color: black;
+  font-size: 0.9em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
 p1 { 
   display: block;
   color: white;
